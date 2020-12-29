@@ -1,0 +1,2561 @@
+/* Framework */
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap");
+
+a,
+a:focus,
+a:active,
+a:hover,
+a:visited {
+    outline: none;
+    text-decoration: none;
+}
+
+a,
+a:focus,
+a:active,
+a:hover,
+a:visited,
+button,
+button:focus,
+button:active,
+input,
+input:focus,
+input:active,
+textarea,
+textarea:focus,
+textarea:active,
+select,
+select:focus,
+select:active {
+    outline: none;
+}
+
+* {
+    font-family: 'Cairo', sans-serif;
+    color: #13161F;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+h2.title {
+    margin-bottom: 40px;
+    position: relative;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+h2.title:after {
+    content: "";
+    display: block;
+    width: 43px;
+    height: 3px;
+    background: #F7931A;
+    position: absolute;
+    bottom: -8px;
+    right: 0;
+    border-radius: 3px;
+}
+
+.main-button {
+    background: #F7931A;
+    padding: 15px 70px;
+    font-weight: 700;
+    border: none;
+    -webkit-transition: all ease-in-out 0.3s;
+    transition: all ease-in-out 0.3s;
+}
+
+.main-button:hover {
+    background: #4267B2;
+}
+
+/* // Framework */
+/* Loading */
+.loading {
+    position: fixed;
+    z-index: 9999999999;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+}
+
+.loading-circle {
+    display: inline-block;
+    -webkit-transform: translateZ(1px);
+    transform: translateZ(1px);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.loading-circle > div {
+    display: inline-block;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border-radius: 50%;
+    background: #F7931A;
+    -webkit-animation: loading 2.4s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+    animation: loading 2.4s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+
+@-webkit-keyframes loading {
+
+    0%,
+    100% {
+        -webkit-animation-timing-function: cubic-bezier(0.5, 0, 1, 0.5);
+        animation-timing-function: cubic-bezier(0.5, 0, 1, 0.5);
+    }
+
+    0% {
+        -webkit-transform: rotateY(0deg);
+        transform: rotateY(0deg);
+    }
+
+    50% {
+        -webkit-transform: rotateY(1800deg);
+        transform: rotateY(1800deg);
+        -webkit-animation-timing-function: cubic-bezier(0, 0.5, 0.5, 1);
+        animation-timing-function: cubic-bezier(0, 0.5, 0.5, 1);
+    }
+
+    100% {
+        -webkit-transform: rotateY(3600deg);
+        transform: rotateY(3600deg);
+    }
+}
+
+@keyframes loading {
+
+    0%,
+    100% {
+        -webkit-animation-timing-function: cubic-bezier(0.5, 0, 1, 0.5);
+        animation-timing-function: cubic-bezier(0.5, 0, 1, 0.5);
+    }
+
+    0% {
+        -webkit-transform: rotateY(0deg);
+        transform: rotateY(0deg);
+    }
+
+    50% {
+        -webkit-transform: rotateY(1800deg);
+        transform: rotateY(1800deg);
+        -webkit-animation-timing-function: cubic-bezier(0, 0.5, 0.5, 1);
+        animation-timing-function: cubic-bezier(0, 0.5, 0.5, 1);
+    }
+
+    100% {
+        -webkit-transform: rotateY(3600deg);
+        transform: rotateY(3600deg);
+    }
+}
+
+/* // Loading */
+.sticky-social {
+    position: absolute;
+    z-index: 200;
+    left: 45px;
+    top: 300px;
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.sticky-social li:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.sticky-social li a {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    background: #eee;
+    line-height: 50px;
+    font-size: 33px;
+    -webkit-transition: all ease-in-out 0.3s;
+    transition: all ease-in-out 0.3s;
+}
+
+.sticky-social li a i {
+    color: #fff;
+}
+
+.sticky-social li a:hover {
+    background: #F7931A !important;
+}
+
+.sticky-social li.telegram a {
+    background: #61A8DE;
+}
+
+.sticky-social li.facebook a {
+    background: #4267B2;
+}
+
+.sticky-social li.twitter a {
+    background: #50ABF1;
+}
+
+.sticky-social.sticky {
+    position: fixed;
+    top: 50px;
+}
+
+/* Header */
+header .logo-ad {
+    padding: 30px 0px;
+}
+
+header .logo-ad .ad-widget {
+    max-width: 728px;
+    height: 90px;
+}
+
+header .logo-ad .ad-widget img {
+    max-width: 100%;
+}
+
+header .menus {
+    background: #fff;
+    -webkit-box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.15);
+    padding: 15px 0px;
+}
+
+header .menus ul.menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0px;
+    margin: 0px;
+}
+
+header .menus ul.menu > li {
+    margin-left: 30px;
+    position: relative;
+}
+
+header .menus ul.menu > li > a {
+    color: #13161F;
+    font-size: 16px;
+    font-weight: 600;
+    position: relative;
+}
+
+header .menus ul.menu > li > a:after {
+    content: "";
+    display: block;
+    width: 0%;
+    height: 2px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background: #F7931A;
+    -webkit-transition: all ease-in-out 0.2s;
+    transition: all ease-in-out 0.2s;
+}
+
+header .menus ul.menu > li > a:hover:after {
+    width: 100%;
+}
+
+header .menus ul.menu > li > a i {
+    margin-right: 5px;
+}
+
+header .menus ul.menu > li > a:hover + ul {
+    top: 38px;
+    opacity: 1;
+    visibility: visible;
+}
+
+header .menus ul.menu > li ul {
+    position: absolute;
+    width: 200px;
+    background: #fff;
+    list-style: none;
+    padding: 10px 15px;
+    -webkit-box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3);
+    top: 50px;
+    right: 0;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: all ease-in-out 0.2s;
+    transition: all ease-in-out 0.2s;
+    z-index: 100;
+}
+
+header .menus ul.menu > li ul:hover {
+    top: 38px;
+    opacity: 1;
+    visibility: visible;
+}
+
+header .menus ul.menu > li ul:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #fff;
+    position: absolute;
+    top: -10px;
+    right: 10px;
+}
+
+header .menus ul.menu > li ul li:not(:last-child) {
+    margin-bottom: 5px;
+}
+
+header .menus ul.menu > li ul li a {
+    font-size: 16px;
+    color: #13161F;
+    font-weight: 600;
+}
+
+header .menus ul.menu > li ul li a:hover {
+    color: #F7931A;
+}
+
+header .menus .mobile-menu {
+    display: none;
+}
+
+header .menus .mobile-button {
+    display: none;
+}
+
+header .menus .search-dark-language {
+    margin-left: 40px;
+}
+
+header .menus .search-dark-language .search-container {
+    position: relative;
+}
+
+header .menus .search-dark-language .search-container a.search {
+    color: #13161F;
+    font-size: 16px;
+    margin-left: 30px;
+}
+
+header .menus .search-dark-language .search-container .search-box {
+    position: absolute;
+    background: #fff;
+    -webkit-box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3);
+    background: #fff;
+    padding: 10px 15px;
+    width: 400px;
+    right: -60px;
+    top: 40px;
+    display: none;
+    z-index: 100;
+}
+
+header .menus .search-dark-language .search-container .search-box .search-inputs {
+    position: relative;
+}
+
+header .menus .search-dark-language .search-container .search-box .search-inputs input[type="text"] {
+    height: 50px;
+    border: 1px solid #999;
+    border-radius: 5px;
+    width: 100%;
+    padding-right: 10px;
+}
+
+header .menus .search-dark-language .search-container .search-box .search-inputs input[type="submit"] {
+    background: #F7931A;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 50px;
+    width: 80px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+
+header .menus .search-dark-language .search-container .search-box:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #fff;
+    position: absolute;
+    top: -10px;
+    right: 60px;
+}
+
+header .menus .search-dark-language .dark {
+    margin-left: 30px;
+}
+
+header .menus .search-dark-language .dark a {
+    display: block;
+    width: 35px;
+    height: 14px;
+    background: #363636;
+    border-radius: 30px;
+    position: relative;
+}
+
+header .menus .search-dark-language .dark a:before {
+    content: "";
+    display: block;
+    position: absolute;
+    background: #F1F1F1;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    top: -3px;
+    left: 0;
+    -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.24);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.24);
+}
+
+header .menus .search-dark-language .dark.flip a:before {
+    left: auto;
+}
+
+header .menus .search-dark-language ul.language {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+header .menus .search-dark-language ul.language > li {
+    position: relative;
+}
+
+header .menus .search-dark-language ul.language > li > a {
+    color: #13161F;
+    font-size: 16px;
+    -webkit-transition: all ease-in-out 0.3s;
+    transition: all ease-in-out 0.3s;
+}
+
+header .menus .search-dark-language ul.language > li > a i {
+    -webkit-transition: all ease-in-out 0.3s;
+    transition: all ease-in-out 0.3s;
+    margin-right: 5px;
+}
+
+header .menus .search-dark-language ul.language > li > a:hover + ul {
+    top: 38px;
+    opacity: 1;
+    visibility: visible;
+}
+
+header .menus .search-dark-language ul.language > li > a:hover {
+    color: #F7931A;
+}
+
+header .menus .search-dark-language ul.language > li > a:hover i {
+    color: #F7931A;
+}
+
+header .menus .search-dark-language ul.language > li ul {
+    position: absolute;
+    width: 120px;
+    background: #fff;
+    list-style: none;
+    padding: 10px 15px;
+    -webkit-box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3);
+    top: 50px;
+    right: 0;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: all ease-in-out 0.2s;
+    transition: all ease-in-out 0.2s;
+    z-index: 100;
+}
+
+header .menus .search-dark-language ul.language > li ul:hover {
+    top: 38px;
+    opacity: 1;
+    visibility: visible;
+}
+
+header .menus .search-dark-language ul.language > li ul:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #fff;
+    position: absolute;
+    top: -10px;
+    right: 10px;
+}
+
+header .menus .search-dark-language ul.language > li ul li:not(:last-child) {
+    margin-bottom: 5px;
+}
+
+header .menus .search-dark-language ul.language > li ul li a {
+    font-size: 16px;
+    color: #13161F;
+    font-weight: 600;
+}
+
+header .menus .search-dark-language ul.language > li ul li a:hover {
+    color: #F7931A;
+}
+
+/* // Header */
+/* Main News */
+.main-news {
+    margin: 40px 0px 100px 0px;
+}
+
+.main-news .breaking-main-news .breaking-news-carousel {
+    border: 1px solid #D8D8D8;
+    border-radius: 5px;
+}
+
+.main-news .breaking-main-news .breaking-news-carousel h5 {
+    background: #F7931A;
+    padding: 10px 20px;
+    color: #fff;
+    font-weight: 700;
+    font-size: 16px;
+    margin: 0px;
+    display: block;
+    width: 180px;
+}
+
+.main-news .breaking-main-news .breaking-news-carousel h5 i {
+    margin-right: 10px;
+}
+
+.main-news .breaking-main-news .breaking-news-carousel ul {
+    list-style: none;
+    display: block;
+    width: 100%;
+    height: 41px;
+    margin: 0px;
+    padding: 0px 20px 0px 0px;
+    line-height: 41px;
+    overflow: hidden;
+}
+
+.main-news .breaking-main-news .breaking-news-carousel ul li {
+    width: 100%;
+    height: 41px;
+    margin: 0px;
+    padding: 0px;
+    -webkit-transition: all ease-in-out 0.3s;
+    transition: all ease-in-out 0.3s;
+}
+
+.main-news .breaking-main-news .breaking-news-carousel ul li a {
+    width: 100%;
+    color: #13161F;
+    height: 41px;
+}
+
+.main-news .breaking-main-news .breaking-news-carousel ul li a h6 {
+    margin: 0px;
+    margin-left: 20px;
+}
+
+.main-news .breaking-main-news .breaking-news-carousel ul li a span {
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    color: #A0A0A0;
+}
+
+.main-news .breaking-main-news .main-carousel {
+    margin-top: 30px;
+}
+
+.main-news .breaking-main-news .main-carousel .carousel-item:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    background: rgba(0, 0, 0, 0.3);
+    top: 0;
+    left: 0;
+    border-radius: 5px;
+}
+
+.main-news .breaking-main-news .main-carousel .carousel-caption {
+    bottom: 60px;
+    right: 70px;
+    text-align: right;
+}
+
+.main-news .breaking-main-news .main-carousel .carousel-caption span.category {
+    display: inline-block;
+    background: #F7931A;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    color: #fff;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.main-news .breaking-main-news .main-carousel .carousel-caption h2 {
+    font-size: 25px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.main-news .breaking-main-news .main-carousel .carousel-caption .time {
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.main-news .breaking-main-news .main-carousel .carousel-caption .time i {
+    color: #fff;
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+.main-news .breaking-main-news .main-carousel .carousel-control-next,
+.main-news .breaking-main-news .main-carousel .carousel-control-prev {
+    position: absolute;
+    top: auto;
+    width: 40px;
+    height: 40px;
+    opacity: 1;
+    background: #fff;
+    color: #53585C;
+    right: 0;
+    -webkit-transition: all ease-in-out 0.3s;
+    transition: all ease-in-out 0.3s;
+}
+
+.main-news .breaking-main-news .main-carousel .carousel-control-next i,
+.main-news .breaking-main-news .main-carousel .carousel-control-prev i {
+    font-size: 24px;
+}
+
+.main-news .breaking-main-news .main-carousel .carousel-control-next:hover,
+.main-news .breaking-main-news .main-carousel .carousel-control-prev:hover {
+    background: #F7931A;
+}
+
+.main-news .breaking-main-news .main-carousel .carousel-control-next:hover i,
+.main-news .breaking-main-news .main-carousel .carousel-control-prev:hover i {
+    color: #fff;
+}
+
+.main-news .breaking-main-news .main-carousel .carousel-control-prev {
+    border-bottom-right-radius: 5px;
+}
+
+.main-news .breaking-main-news .main-carousel .carousel-control-next {
+    right: 40px;
+}
+
+.main-news .breaking-main-news .main-carousel .carousel-indicators {
+    position: static;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin: 0px;
+    padding: 0px;
+    margin-top: 10px;
+}
+
+.main-news .breaking-main-news .main-carousel .carousel-indicators li {
+    border: none !important;
+    opacity: 1;
+    text-indent: 0;
+    width: auto;
+    height: auto;
+    padding: 0px;
+    margin: 0px;
+    position: relative;
+}
+
+.main-news .breaking-main-news .main-carousel .carousel-indicators li.active:after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #fff;
+}
+
+.main-news .popular-recent .nav-item a {
+    border: 1px solid #EEEEEE;
+    border-radius: 0px;
+    text-align: center;
+    height: 100%;
+    font-weight: 600;
+    color: #13161F;
+}
+
+.main-news .popular-recent .nav-item a.active {
+    position: relative;
+}
+
+.main-news .popular-recent .nav-item a.active:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: #F7931A;
+    bottom: -2px;
+    left: 0;
+}
+
+.main-news .popular-recent .tab-pane {
+    padding: 30px 0px;
+}
+
+.main-news .popular-recent .tab-pane .item {
+    margin-bottom: 27px;
+}
+
+.main-news .popular-recent .tab-pane .item .img {
+    width: 120px;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 120px;
+    flex: 0 1 120px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.main-news .popular-recent .tab-pane .item .info {
+    width: calc(100% - 120px);
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 calc(100% - 120px);
+    flex: 0 1 calc(100% - 120px);
+    padding-right: 15px;
+}
+
+.main-news .popular-recent .tab-pane .item .info h3 {
+    font-size: 15px;
+    font-weight: 400;
+    margin-bottom: 25px;
+    -webkit-transition: all ease-in-out 0.3s;
+    transition: all ease-in-out 0.3s;
+}
+
+.main-news .popular-recent .tab-pane .item .info span {
+    font-size: 12px;
+    color: #A0A0A0;
+}
+
+.main-news .popular-recent .tab-pane .item:hover h3 {
+    color: #F7931A;
+}
+
+/* // Main News */
+/* General News */
+section.general-news {
+    margin-bottom: 60px;
+}
+
+section.general-news .item {
+    margin-bottom: 20px;
+}
+
+section.general-news .item a.img-category {
+    display: block;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+}
+
+section.general-news .item a.img-category:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.16);
+    left: 0;
+    top: 0;
+}
+
+section.general-news .item a.img-category .category {
+    background: #DC472E;
+    padding: 7px 10px;
+    border-radius: 5px;
+    color: #fff;
+    position: absolute;
+    z-index: 20;
+    bottom: 20px;
+    right: 20px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+section.general-news .item .item-title {
+    display: block;
+    margin: 15px 0px;
+    color: #13161F;
+    -webkit-transition: all ease-in-out 0.3s;
+    transition: all ease-in-out 0.3s;
+}
+
+section.general-news .item .item-title h3 {
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 700;
+}
+
+section.general-news .item .item-title:hover {
+    color: #F7931A;
+}
+
+section.general-news .item p {
+    font-size: 14px;
+    font-weight: 600;
+    margin: 10px 0px;
+}
+
+section.general-news .item .date,
+section.general-news .item .admin {
+    color: #13161F;
+    font-size: 14px;
+}
+
+section.general-news .item .date i,
+section.general-news .item .admin i {
+    color: #F7931A;
+    margin-lefts: 5px;
+}
+
+/* // General News */
+/* General Ad */
+.general-ad .ad97090 {
+    display: block;
+    max-width: 970px;
+    max-height: 90px;
+}
+
+.general-ad.ad2 {
+    margin: 100px 0px 80px 0px;
+}
+
+/* // General Ad */
+/* Coins News */
+.coins-news {
+    margin: 40px 0px 60px 0px;
+}
+
+.coins-news .col-lg-6 .item {
+    position: relative;
+    margin-bottom: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.coins-news .col-lg-6 .item a.img-category {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    border-radius: 5px;
+    width: 170px;
+}
+
+.coins-news .col-lg-6 .item a.img-category:after {
+    content: "";
+    position: absolute;
+    z-index: 10;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    top: 0;
+    left: 0;
+}
+
+.coins-news .col-lg-6 .item a.img-category span.category {
+    position: absolute;
+    background: #4267B2;
+    padding: 6px 15px;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #fff;
+    z-index: 20;
+    bottom: 20px;
+    right: 10px;
+}
+
+.coins-news .col-lg-6 .item .title-date-admin {
+    width: calc(100% - 170px);
+    padding-right: 15px;
+}
+
+.coins-news .col-lg-6 .item a.item-title {
+    position: statice;
+    text-align: right;
+    color: #13161F;
+    -webkit-transition: all ease-in-out 0.3s;
+    transition: all ease-in-out 0.3s;
+}
+
+.coins-news .col-lg-6 .item a.item-title h3 {
+    font-size: 20px;
+}
+
+.coins-news .col-lg-6 .item a.item-title:hover {
+    color: #F7931A;
+}
+
+.coins-news .col-lg-6 .item .date-admin .date,
+.coins-news .col-lg-6 .item .date-admin .admin {
+    color: #13161F;
+    font-size: 14px;
+    margin-top: 40px;
+}
+
+.coins-news .col-lg-6 .item .date-admin .date i,
+.coins-news .col-lg-6 .item .date-admin .admin i {
+    color: #F7931A;
+    margin-right: 5px;
+    font-size: 14px;
+}
+
+.coins-news .col-lg-6:first-child .item,
+.coins-news .col-lg-6:nth-child(2) .item {
+    display: block;
+}
+
+.coins-news .col-lg-6:first-child a.img-category,
+.coins-news .col-lg-6:nth-child(2) a.img-category {
+    width: 100%;
+}
+
+.coins-news .col-lg-6:first-child span.category,
+.coins-news .col-lg-6:nth-child(2) span.category {
+    bottom: 65px !important;
+}
+
+.coins-news .col-lg-6:first-child a.item-title,
+.coins-news .col-lg-6:nth-child(2) a.item-title {
+    position: absolute;
+    bottom: 15px;
+    width: 100%;
+    text-align: center;
+    z-index: 30;
+    right: 0;
+    color: #fff;
+}
+
+.coins-news .col-lg-6:first-child a.item-title h3,
+.coins-news .col-lg-6:nth-child(2) a.item-title h3 {
+    font-size: 25px;
+}
+
+.coins-news .col-lg-6:first-child .date-admin,
+.coins-news .col-lg-6:nth-child(2) .date-admin {
+    display: none;
+}
+
+/* // Coins News */
+/* Blockchain technology */
+.blockchain-technology {
+    margin-bottom: 80px;
+}
+
+.blockchain-technology .blockchain-carousel {
+    margin-bottom: 0px;
+}
+
+.blockchain-technology .blockchain-carousel .item {
+    margin-bottom: 20px;
+    border: 1px solid rgba(112, 112, 112, 0.3);
+    border-radius: 5px;
+}
+
+.blockchain-technology .blockchain-carousel .item a.img-category {
+    display: block;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    overflow: hidden;
+    position: relative;
+}
+
+.blockchain-technology .blockchain-carousel .item a.img-category:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.16);
+    left: 0;
+    top: 0;
+}
+
+.blockchain-technology .blockchain-carousel .item a.img-category .category {
+    background: #F7931A;
+    padding: 7px 10px;
+    border-radius: 5px;
+    color: #fff;
+    position: absolute;
+    z-index: 20;
+    bottom: 20px;
+    right: 20px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.blockchain-technology .blockchain-carousel .item .item-title {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 80px;
+    color: #13161F;
+    -webkit-transition: all ease-in-out 0.3s;
+    transition: all ease-in-out 0.3s;
+}
+
+.blockchain-technology .blockchain-carousel .item .item-title h3 {
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.blockchain-technology .blockchain-carousel .item .item-title:hover {
+    color: #F7931A;
+}
+
+.blockchain-technology .blockchain-carousel .item .date,
+.blockchain-technology .blockchain-carousel .item .admin {
+    color: #13161F;
+    font-size: 14px;
+}
+
+.blockchain-technology .blockchain-carousel .item .date i,
+.blockchain-technology .blockchain-carousel .item .admin i {
+    color: #F7931A;
+    margin-lefts: 5px;
+}
+
+.blockchain-technology .ad300600 {
+    display: block;
+    padding: 15px 25px;
+    border: 1px solid rgba(112, 112, 112, 0.2);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+.blockchain-technology .ad300600 img {
+    max-width: 300px;
+    max-height: 600px;
+}
+
+/* // Blockchain technology */
+/* Acadimy */
+.acadimy .items {
+    background: url("../imgs/acadimy-bg.png") no-repeat;
+    background-size: cover;
+    padding: 80px 0px;
+}
+
+.acadimy .items .item {
+    background: #13161F;
+    padding: 30px;
+    border-radius: 5px;
+}
+
+.acadimy .items .item .img-title h3 {
+    color: #fff;
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+.acadimy .items .item ol {
+    padding: 0px;
+    margin: 0px;
+    padding-right: 16px;
+    margin-top: 60px;
+}
+
+.acadimy .items .item ol li {
+    color: #fff;
+    font-size: 16px;
+}
+
+.acadimy .items .item ol li:not(:last-child) {
+    margin-bottom: 5px;
+}
+
+.acadimy .items .item ol li a {
+    color: #F7931A;
+    font-size: 16px;
+}
+
+/* // Acadimy */
+/* Footer */
+footer {
+    background: url("../imgs/footer-bg.png") no-repeat;
+    background-size: cover;
+    padding-top: 350px;
+}
+
+footer .footer-top {
+    margin-bottom: 50px;
+}
+
+footer .footer-top .logo-social ul {
+    margin-top: 20px;
+}
+
+footer .footer-top .logo-social ul li a {
+    display: block;
+    width: 36px;
+    height: 36px;
+    background: #fff;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 36px;
+    -webkit-transition: all ease-in-out 0.3s;
+    transition: all ease-in-out 0.3s;
+}
+
+footer .footer-top .logo-social ul li a:hover {
+    background: #F7931A;
+}
+
+footer .footer-top .logo-social ul li:not(:last-child) {
+    margin-left: 10px;
+}
+
+footer .footer-top .links li a {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    -webkit-transition: all ease-in-out 0.3s;
+    transition: all ease-in-out 0.3s;
+}
+
+footer .footer-top .links li a:hover {
+    color: #F7931A;
+}
+
+footer .footer-top .links li:not(:last-child) {
+    margin-bottom: 5px;
+}
+
+footer .footer-top .app h4 {
+    color: #fff;
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+footer .footer-top .app ul li:not(:last-child) {
+    margin-bottom: 8px;
+}
+
+footer .footer-bottom {
+    overflow: hidden;
+}
+
+footer .footer-bottom p {
+    margin-bottom: 35px;
+    color: #fff;
+}
+
+/* // Footer */
+.go-to-top {
+    display: none;
+    position: fixed;
+    z-index: 200;
+    right: 30px;
+    bottom: 30px;
+    background: #fff;
+    height: 50px;
+    width: 50px;
+    border-radius: 5px;
+    font-size: 30px;
+    text-align: center;
+    line-height: 50px;
+    -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+    -webkit-transition: all ease-in-out 0.3s;
+    transition: all ease-in-out 0.3s;
+}
+
+.go-to-top i {
+    color: #F7931A;
+}
+
+.go-to-top:hover {
+    background: #F7931A;
+}
+
+.go-to-top:hover i {
+    color: #fff;
+}
+
+/* Blockchain Section */
+.section-padding {
+    padding: 70px 0px;
+}
+
+section.blockchain .item {
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.16);
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.16);
+    margin-bottom: 15px;
+    -webkit-transition: all ease-in-out 0.3s;
+    transition: all ease-in-out 0.3s;
+}
+
+section.blockchain .item:hover {
+    -webkit-box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.16);
+    box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.16);
+}
+
+section.blockchain .item a.img {
+    display: block;
+}
+
+section.blockchain .item .title-desc {
+    padding: 20px;
+}
+
+section.blockchain .item .title-desc a.title {
+    color: #13161F;
+    -webkit-transition: all ease-in-out 0.3s;
+    transition: all ease-in-out 0.3s;
+}
+
+section.blockchain .item .title-desc a.title h3 {
+    font-size: 18px;
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+
+section.blockchain .item .title-desc a.title:hover {
+    color: #F7931A;
+}
+
+section.blockchain .item .title-desc p {
+    font-size: 14px;
+    color: #13161F;
+    margin: 0px;
+    font-weight: 600;
+}
+
+/* // Blockchain Section */
+/* Coins News Section */
+.coins-news-section .right-side .item {
+    margin-bottom: 20px;
+    border: 1px solid rgba(112, 112, 112, 0.3);
+    border-radius: 5px;
+}
+
+.coins-news-section .right-side .item a.img-category {
+    display: block;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    overflow: hidden;
+    position: relative;
+}
+
+.coins-news-section .right-side .item a.img-category:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.16);
+    left: 0;
+    top: 0;
+}
+
+.coins-news-section .right-side .item a.img-category .category {
+    background: #4267B2;
+    padding: 7px 10px;
+    border-radius: 5px;
+    color: #fff;
+    position: absolute;
+    z-index: 20;
+    bottom: 20px;
+    right: 20px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.coins-news-section .right-side .item .details {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-line-pack: justify;
+    align-content: space-between;
+    height: 100%;
+}
+
+.coins-news-section .right-side .item .details .item-title {
+    display: block;
+    margin-top: 15px;
+    color: #13161F;
+    -webkit-transition: all ease-in-out 0.3s;
+    transition: all ease-in-out 0.3s;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 100%;
+    flex: 0 1 100%;
+    width: 100%;
+}
+
+.coins-news-section .right-side .item .details .item-title h3 {
+    font-size: 16px;
+    line-height: 1.3;
+    font-weight: 600;
+}
+
+.coins-news-section .right-side .item .details .item-title:hover {
+    color: #F7931A;
+}
+
+.coins-news-section .right-side .item .details .date-admin {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 100%;
+    flex: 0 1 100%;
+    width: 100%;
+}
+
+.coins-news-section .right-side .item .details .date-admin .date,
+.coins-news-section .right-side .item .details .date-admin .admin {
+    color: #13161F;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.coins-news-section .right-side .item .details .date-admin .date i,
+.coins-news-section .right-side .item .details .date-admin .admin i {
+    color: #F7931A;
+    margin-lefts: 5px;
+}
+
+.coins-news-section .right-side .item .details p {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 100%;
+    flex: 0 1 100%;
+    width: 100%;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.coins-news-section .about p {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.coins-news-section .left-side .ad {
+    display: block;
+    padding: 15px 25px;
+    border: 1px solid rgba(112, 112, 112, 0.2);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+.coins-news-section .left-side .ad2 {
+    display: block;
+    padding: 15px 25px;
+    border: 1px solid rgba(112, 112, 112, 0.2);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    border-radius: 5px;
+    margin-top: 30px;
+}
+
+.form {
+    -webkit-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+    padding: 30px;
+    border-radius: 5px;
+}
+
+.form .form-group {
+    margin-bottom: 20px;
+}
+
+.form label {
+    color: #13161F;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.form input:not([type="submit"]) {
+    height: 50px;
+    border-radius: 5px;
+    background: #F5F5F5;
+    border: 1px solid rgba(112, 112, 112, 0.2);
+}
+
+.form input[type="submit"] {
+    height: 50px;
+    border-radius: 5px;
+    background: #F7931A;
+    border: 1px solid #F7931A;
+    font-size: 16px;
+    font-weight: 700;
+    -webkit-transition: all ease-in-out 0.3s;
+    transition: all ease-in-out 0.3s;
+}
+
+.form input[type="submit"]:hover {
+    background: #13161F;
+    border-color: #13161F;
+}
+
+.contact-social {
+    margin-bottom: 50px;
+}
+
+.contact-social li:not(:last-child) {
+    margin-left: 15px;
+}
+
+.contact-social li a {
+    display: block;
+    width: 77px;
+    height: 77px;
+    text-align: center;
+    line-height: 77px;
+    font-size: 50px;
+    border-radius: 2px;
+    -webkit-transition: all ease-in-out 0.3s;
+    transition: all ease-in-out 0.3s;
+}
+
+.contact-social li a i {
+    color: #fff;
+}
+
+.contact-social li a:hover {
+    background: #F7931A !important;
+}
+
+.contact-social li.youtube a {
+    background: #cd201f;
+}
+
+.contact-social li.twitter a {
+    background: #55acee;
+}
+
+.contact-social li.facebook a {
+    background: #3b5999;
+}
+
+.contact-social li.telegram a {
+    background: #61A8DE;
+}
+
+/* // Coins News Section */
+/* Single Post */
+.pagination-title ul.pagination {
+    margin: 0px;
+    margin-bottom: 10px;
+}
+
+.pagination-title ul.pagination li {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.pagination-title ul.pagination li.home a {
+    color: #F7931A;
+    font-size-adjust: 14px;
+    font-weight: 600;
+}
+
+.pagination-title ul.pagination li.devider {
+    padding: 0px 4px;
+    font-weight: 600;
+}
+
+.pagination-title h1 {
+    font-size: 25px;
+    font-weight: 700;
+    color: #13161F;
+    margin-bottom: 15px;
+}
+
+.pagination-title ul.date-admin li {
+    font-size: 14px;
+    color: #13161F;
+    font-weight: 600;
+}
+
+.pagination-title ul.date-admin li:first-child {
+    margin-left: 50px;
+}
+
+.pagination-title ul.date-admin li i {
+    color: #F7931A;
+    margin-left: 5px;
+}
+
+.single-blog .video-or-image {
+    border-radius: 5px;
+}
+
+.single-blog .content {
+    margin-bottom: 30px;
+}
+
+.single-blog .content p,
+.single-blog .content ul,
+.single-blog .content ol,
+.single-blog .content strong {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.single-blog ul.tags li {
+    color: #13161F;
+    font-size: 16px;
+    font-weight: 700;
+    overflow: hidden;
+}
+
+.single-blog ul.tags li:not(:last-child) {
+    margin-left: 8px;
+}
+
+.single-blog ul.tags li a {
+    display: block;
+    font-size: 14px;
+    padding: 5px 20px;
+    background: #F5F5F5;
+    color: rgba(0, 0, 0, 0.5);
+    -webkit-transition: all ease-in-out 0.3s;
+    transition: all ease-in-out 0.3s;
+}
+
+.single-blog ul.tags li a:hover {
+    color: #fff;
+    background: #F7931A;
+}
+
+.single-blog h2 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.single-blog h2 img {
+    margin-left: 12px;
+}
+
+.single-blog .related-posts .item {
+    margin-bottom: 20px;
+}
+
+.single-blog .related-posts .item a.img-category {
+    display: block;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+}
+
+.single-blog .related-posts .item a.img-category:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.16);
+    left: 0;
+    top: 0;
+}
+
+.single-blog .related-posts .item a.img-category .category {
+    background: #DC472E;
+    padding: 7px 10px;
+    border-radius: 5px;
+    color: #fff;
+    position: absolute;
+    z-index: 20;
+    bottom: 20px;
+    right: 20px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.single-blog .related-posts .item .item-title {
+    display: block;
+    margin: 15px 0px;
+    color: #13161F;
+    -webkit-transition: all ease-in-out 0.3s;
+    transition: all ease-in-out 0.3s;
+}
+
+.single-blog .related-posts .item .item-title h3 {
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 700;
+}
+
+.single-blog .related-posts .item .item-title:hover {
+    color: #F7931A;
+}
+
+.single-blog .related-posts .item p {
+    font-size: 14px;
+    font-weight: 600;
+    margin: 10px 0px;
+}
+
+.single-blog .related-posts .item .date,
+.single-blog .related-posts .item .admin {
+    color: #13161F;
+    font-size: 14px;
+}
+
+.single-blog .related-posts .item .date i,
+.single-blog .related-posts .item .admin i {
+    color: #F7931A;
+    margin-lefts: 5px;
+}
+
+/* // Single Post */
+/* Sell and Buy */
+.sellandbuy .sell-buy .content p,
+.sellandbuy .sell-buy .content ul,
+.sellandbuy .sell-buy .content ol,
+.sellandbuy .sell-buy .content strong {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.sellandbuy .sell-buy .content h3 {
+    color: #F7931A;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    margin-top: 30px;
+}
+
+.sellandbuy .sell-buy .advantages img {
+    margin-bottom: 10px;
+}
+
+.sellandbuy .sell-buy .advantages h4 {
+    font-size: 16px;
+    color: #13161F;
+}
+
+.sellandbuy .sell-buy .advice {
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+    padding: 30px;
+}
+
+.sellandbuy .sell-buy .advice p {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.sellandbuy .sell-buy .advice p .main-color {
+    color: #F7931A;
+}
+
+.sellandbuy .sell-buy iframe {
+    width: 100%;
+}
+
+/* // Sell and Buy */
+/* Events */
+.events .items .item {
+    border-radius: 5px;
+    overflow: hidden;
+    -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.16);
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.16);
+    margin-bottom: 15px;
+    -webkit-transition: all ease-in-out 0.3s;
+    transition: all ease-in-out 0.3s;
+}
+
+.events .items .item .img-date {
+    display: block;
+    position: relative;
+}
+
+.events .items .item .img-date:before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.15);
+    z-index: 20;
+}
+
+.events .items .item .img-date .date {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #fff;
+    z-index: 50;
+    padding: 10px 30px;
+    text-align: center;
+    border-bottom-left-radius: 5px;
+}
+
+.events .items .item .img-date .date .day {
+    display: block;
+    width: 100%;
+    color: #13161F;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.events .items .item .img-date .date .month,
+.events .items .item .img-date .date .year {
+    display: block;
+    color: rgba(19, 22, 31, 0.6);
+    font-size: 18px;
+    font-weight: 700;
+    width: 100%;
+}
+
+.events .items .item .title-place-logo {
+    padding: 20px;
+}
+
+.events .items .item .title-place-logo .img {
+    height: 100%;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    margin-left: 15px;
+}
+
+.events .items .item .title-place-logo .title-place {
+    height: 100%;
+}
+
+.events .items .item .title-place-logo .title-place a,
+.events .items .item .title-place-logo .title-place span {
+    display: block;
+    width: 100%;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 100%;
+    flex: 0 1 100%;
+}
+
+.events .items .item .title-place-logo .title-place a {
+    color: #13161F;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    -webkit-transition: all ease-in-out 0.3s;
+    transition: all ease-in-out 0.3s;
+}
+
+.events .items .item .title-place-logo .title-place a:hover {
+    color: #F7931A !important;
+}
+
+.events .items .item .title-place-logo .title-place span {
+    color: rgba(19, 22, 31, 0.6);
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.events .items .item .title-place-logo .title-place span i {
+    color: #13161F;
+    margin-left: 5px;
+}
+
+.events .items .item:hover {
+    -webkit-box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.16);
+    box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.16);
+}
+
+/* // Events */
+.dark-theme {
+    background: #333;
+}
+
+.dark-theme header .menus {
+    background: #333;
+}
+
+.dark-theme header .menus ul.menu > li > a,
+.dark-theme header .menus ul.menu > li > a i,
+.dark-theme header .menus .search-dark-language ul.language > li > a,
+.dark-theme header .menus .search-dark-language .search-container a.search i,
+.dark-theme header .menus .search-dark-language ul.language > li > a i,
+.dark-theme .main-news .breaking-main-news .breaking-news-carousel ul li a h6,
+.dark-theme .nav-tabs .nav-item.show .nav-link,
+.dark-theme .nav-tabs .nav-link.active,
+.dark-theme .main-news .popular-recent .nav-item a,
+.dark-theme .main-news .popular-recent .tab-pane .item .info h3,
+.dark-theme h2.title,
+.dark-theme section.general-news .item .item-title h3,
+.dark-theme .coins-news .col-md-6 .item a.item-title h3,
+.dark-theme .blockchain-technology .blockchain-carousel .item .item-title h3,
+.dark-theme section.general-news .item .date,
+.dark-theme section.general-news .item .admin,
+.dark-theme .coins-news .col-lg-6 .item a.item-title,
+.dark-theme .coins-news .col-lg-6 .item .date-admin .date,
+.dark-theme .coins-news .col-lg-6 .item .date-admin .admin,
+.dark-theme .blockchain-technology .blockchain-carousel .item .date,
+.dark-theme .blockchain-technology .blockchain-carousel .item .admin,
+.dark-theme .coins-news-section .about p,
+.dark-theme .form label,
+.dark-theme section.blockchain .item .title-desc a.title,
+.dark-theme section.blockchain .item .title-desc p,
+.dark-theme .coins-news-section .right-side .item .details .item-title h3,
+.dark-theme .coins-news-section .right-side .item .details .date-admin .date,
+.dark-theme .coins-news-section .right-side .item .details .date-admin .admin,
+.dark-theme .coins-news-section .right-side .item .details p.acadimy,
+.dark-theme section.general-news .item p,
+.dark-theme .sellandbuy .sell-buy .content p,
+.dark-theme .sellandbuy .sell-buy .content ul,
+.dark-theme .sellandbuy .sell-buy .content ol,
+.dark-theme .sellandbuy .sell-buy .content strong,
+.dark-theme .sellandbuy .sell-buy .advantages h4,
+.dark-theme .sellandbuy .sell-buy .advice p,
+.dark-theme .pagination-title ul.pagination li,
+.dark-theme .pagination-title h1,
+.dark-theme .pagination-title ul.date-admin li,
+.dark-theme .single-blog .content p,
+.dark-theme .single-blog .content ul,
+.dark-theme .single-blog .content ol,
+.dark-theme .single-blog .content strong,
+.dark-theme .single-blog ul.tags li:first-child,
+.dark-theme .single-blog h2,
+.dark-theme .single-blog .related-posts .item .item-title h3,
+.dark-theme .single-blog .related-posts .item .date,
+.dark-theme .single-blog .related-posts .item .admin,
+.dark-theme .coins-news-section .right-side .item .details p,
+.dark-theme .events .items .item .img-date .date .day,
+.dark-theme .events .items .item .title-place-logo .title-place a,
+.dark-theme .events .items .item .title-place-logo .title-place span i {
+    color: #fff;
+}
+
+.dark-theme .nav-tabs .nav-item.show .nav-link,
+.dark-theme .nav-tabs .nav-link.active {
+    background: #999;
+}
+
+.dark-theme .events .items .item .img-date .date {
+    background: #333;
+}
+
+.dark-theme header .menus .search-dark-language .dark a {
+    background: #fff;
+}
+
+.dark-theme header .menus .search-dark-language .dark a:before {
+    background: #999;
+}
+
+.dark-theme .main-news .popular-recent .nav-item a {
+    border-color: #999;
+}
+
+.dark-theme .main-news .popular-recent .tab-pane .item:hover .info h3 {
+    color: #F7931A;
+}
+
+.dark-theme .carousel-indicators li {
+    background: none;
+}
+
+.dark-theme .main-news .breaking-main-news .main-carousel .carousel-indicators li.active:after {
+    border-top: 10px solid #333;
+}
+
+.dark-theme section.general-news .item .item-title:hover h3,
+.dark-theme .coins-news .col-md-6 .item a.item-title:hover h3,
+.dark-theme .blockchain-technology .blockchain-carousel .item .item-title:hover h3,
+.dark-theme .coins-news .col-lg-6 .item a.item-title:hover,
+.dark-theme section.blockchain .item .title-desc a.title:hover,
+.dark-theme .coins-news-section .right-side .item .details .item-title:hover h3,
+.dark-theme .single-blog .related-posts .item .item-title:hover h3 {
+    color: #F7931A;
+}
+
+.dark-theme .coins-news-section .left-side .ad,
+.dark-theme .coins-news-section .left-side .ad2,
+.dark-theme .coins-news-section .right-side .item,
+.dark-theme .blockchain-technology .ad300600,
+.dark-theme .blockchain-technology .blockchain-carousel .item {
+    border-color: #fff;
+}
+
+.dark-theme section.blockchain .item {
+    -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.dark-theme section.blockchain .item:hover {
+    -webkit-box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.16);
+    box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.16);
+}
+
+.dark-theme .events .items .item .img-date .date .month,
+.dark-theme .events .items .item .img-date .date .year,
+.dark-theme .events .items .item .title-place-logo .title-place span {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* Responsive */
+@media (max-width: 1400px) {
+    header .menus .search-dark-language .search-container .search-box {
+        right: -200px;
+    }
+
+    header .menus .search-dark-language .search-container .search-box:before {
+        right: auto;
+        left: 183px;
+    }
+}
+
+@media (max-width: 1200px) {
+    header .logo-ad .logo img {
+        width: 150px;
+    }
+
+    header .menus ul.menu > li {
+        margin-left: 20px;
+    }
+
+    header .menus ul.menu > li > a {
+        font-size: 14px;
+    }
+
+    header .menus ul.menu > li ul li a {
+        font-size: 14px;
+    }
+
+    header .menus .search-dark-language .search-container .search-box {
+        right: -200px;
+    }
+
+    header .menus .search-dark-language .search-container .search-box:before {
+        right: auto;
+        left: 183px;
+    }
+
+    .main-news .popular-recent .tab-pane .item .info h3 {
+        margin-bottom: 10px;
+    }
+
+    .main-news {
+        margin: 40px 0px 40px 0px;
+    }
+
+    section.general-news .item .item-title h3,
+    .coins-news .col-md-6 .item a.item-title h3,
+    .blockchain-technology .blockchain-carousel .item .item-title h3 {
+        font-size: 18px;
+        line-height: 1.2;
+    }
+
+    .coins-news .col-md-6:first-child a.item-title h3,
+    .coins-news .col-md-6:nth-child(2) a.item-title h3 {
+        font-size: 20px;
+    }
+
+    .coins-news .col-md-6 .item .date-admin .date,
+    .coins-news .col-md-6 .item .date-admin .admin {
+        font-size: 13px;
+        margin-top: 20px;
+    }
+
+    .blockchain-technology .blockchain-carousel .item .item-title h3 {
+        font-size: 18px;
+    }
+
+    .blockchain-technology .blockchain-carousel .item .item-title {
+        margin-bottom: 50px;
+    }
+
+    .blockchain-technology .ad300600 img {
+        max-width: 100%;
+    }
+
+    .acadimy .items .item ol li {
+        font-size: 12px;
+    }
+
+    .acadimy .items .item ol li a {
+        font-size: 12px;
+    }
+
+    .acadimy .items .item ol {
+        margin-top: 40px;
+    }
+
+    .acadimy .items {
+        padding: 60px 0px;
+    }
+
+    .general-ad.ad2 {
+        margin: 60px 0px 40px 0px;
+    }
+
+    footer .footer-top {
+        margin-bottom: 30px;
+    }
+
+    .sellandbuy .sell-buy .content iframe {
+        height: 500px;
+    }
+}
+
+@media (max-width: 992px) {
+    header .logo-ad a.logo {
+        margin-left: 20px;
+    }
+
+    header .logo-ad a.logo img {
+        width: 150px;
+    }
+
+    header .logo-ad .ad-widget {
+        height: auto;
+    }
+
+    header .logo-ad {
+        padding: 15px 0px;
+    }
+
+    .general-ad .ad97090 {
+        max-width: 100%;
+    }
+
+    .coins-news .col-lg-6 .item a.img-category img {
+        width: 100%;
+    }
+
+    header .menus ul.menu {
+        display: none;
+    }
+
+    a.mobile-button {
+        width: 40px;
+        height: 35px;
+        border: 2px solid #13161F;
+        position: relative;
+    }
+
+    a.mobile-button span {
+        display: block;
+        width: 30px;
+        height: 3px;
+        background: #13161F;
+        position: absolute;
+        left: 3px;
+    }
+
+    a.mobile-button span:first-child {
+        top: 5px;
+    }
+
+    a.mobile-button span:nth-child(2) {
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+
+    a.mobile-button span:last-child {
+        bottom: 5px;
+    }
+
+    header .menus .mobile-button {
+        display: inline-block;
+    }
+
+    header .menus .mobile-menu {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: -100%;
+        z-index: 300;
+        background: #fff;
+        padding: 15px 0px;
+        width: 270px;
+        height: 100%;
+        -webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+        -webkit-transition: all ease-in-out 0.3s;
+        transition: all ease-in-out 0.3s;
+    }
+
+    header .menus .mobile-menu.opened {
+        left: 0;
+    }
+
+    header .menus .mobile-menu .logo-close {
+        position: relative;
+        text-align: center;
+    }
+
+    header .menus .mobile-menu .logo-close a.logo {
+        padding: 0px 20px;
+    }
+
+    header .menus .mobile-menu .logo-close a.close-mobile-menu {
+        position: absolute;
+        top: -10px;
+        right: 10px;
+    }
+
+    header .menus .mobile-menu .logo-close a.close-mobile-menu i {
+        color: red;
+    }
+
+    header .menus .mobile-menu ul.mobile > li.menu-item-has-children {
+        position: relative;
+    }
+
+    header .menus .mobile-menu ul.mobile > li.menu-item-has-children:before {
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        content: "\f067";
+        position: absolute;
+        left: 30px;
+        top: 6px;
+        color: #F7931A;
+    }
+
+    header .menus .mobile-menu ul.mobile > li.menu-item-has-children.opened:before {
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        content: "\f068";
+        position: absolute;
+        left: 30px;
+        top: 6px;
+    }
+
+    header .menus .mobile-menu ul.mobile > li > a {
+        display: block;
+        color: #13161F;
+        padding: 5px 10px;
+        border-bottom: 1px solid #aaa;
+        -webkit-transition: all ease-in-out 0.3s;
+        transition: all ease-in-out 0.3s;
+    }
+
+    header .menus .mobile-menu ul.mobile > li > a:hover {
+        color: #F7931A;
+    }
+
+    header .menus .mobile-menu ul.mobile > li ul {
+        padding-right: 30px;
+        list-style: none;
+        display: none;
+    }
+
+    header .menus .mobile-menu ul.mobile > li ul li a {
+        display: block;
+        border-bottom: 1px solid #aaa;
+        padding: 5px;
+        color: #13161F;
+        -webkit-transition: all ease-in-out 0.3s;
+        transition: all ease-in-out 0.3s;
+    }
+
+    header .menus .mobile-menu ul.mobile > li ul li a:hover {
+        color: #F7931A;
+    }
+
+    .menu-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 110;
+        background: rgba(0, 0, 0, 0.5);
+    }
+
+    .main-news .popular-recent {
+        margin-top: 40px;
+    }
+
+    .acadimy .items .item {
+        margin-bottom: 30px;
+    }
+
+    footer .footer-top .logo-social {
+        margin-bottom: 30px;
+    }
+
+    footer .footer-top .links {
+        margin-bottom: 30px;
+    }
+
+    .coins-news-section .right-side .item a.img-category img {
+        width: 100%;
+    }
+
+    .coins-news-section .right-side .item .details {
+        padding: 15px 20px;
+    }
+
+    .coins-news-section .right-side .item .details .item-title {
+        margin: 0px 0px 10px 0px;
+    }
+
+    .coins-news-section .right-side .item .details p {
+        margin: 10px 0px 0px 0px;
+    }
+
+    .single-blog .video-or-image iframe {
+        height: 300px;
+    }
+
+    .single-blog .content p,
+    .single-blog .content ol,
+    .single-blog .content ul,
+    .single-blog .content strong {
+        font-size: 14px;
+    }
+
+    .single-blog .related-posts .item .item-title h3 {
+        font-size: 16px;
+        line-height: 1.3;
+    }
+
+    .sellandbuy .sell-buy .content iframe {
+        height: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-news .breaking-main-news .main-carousel .carousel-indicators {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+
+    .main-news .breaking-main-news .main-carousel .carousel-indicators li {
+        margin-bottom: 10px;
+    }
+
+    .main-news .popular-recent {
+        margin-top: 30px;
+    }
+
+    .main-news .popular-recent .tab-pane .item .info h3 {
+        margin-bottom: 25px;
+    }
+
+    section.general-news .item .date,
+    section.general-news .item .admin {
+        font-size: 12px;
+    }
+
+    .coins-news .col-lg-6 .item .date-admin .date,
+    .coins-news .col-lg-6 .item .date-admin .admin {
+        margin-top: 17px;
+    }
+
+    .main-button {
+        padding: 10px 50px;
+        font-size: 14px;
+    }
+
+    section.general-news .item .item-title h3,
+    .coins-news .col-md-6 .item a.item-title h3,
+    .blockchain-technology .blockchain-carousel .item .item-title h3 {
+        font-size: 16px;
+    }
+
+    .blockchain-technology .blockchain-carousel .item .date,
+    .blockchain-technology .blockchain-carousel .item .admin {
+        font-size: 12px;
+    }
+
+    .blockchain-technology .blockchain-carousel .item .item-title {
+        margin-bottom: 33px;
+    }
+
+    .blockchain-technology .ad300600 {
+        margin-top: 70px;
+    }
+
+    .acadimy .items .item ol li {
+        font-size: 16px;
+    }
+
+    footer {
+        background: #13161F;
+        padding-top: 30px;
+    }
+
+    header .logo-ad {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        text-align: center;
+        -webkit-box-pack: center !important;
+        -ms-flex-pack: center !important;
+        justify-content: center !important;
+    }
+
+    header .logo-ad a.logo {
+        margin-left: 0px;
+        display: inline-block;
+        margin-bottom: 20px;
+    }
+
+    .sticky-social {
+        left: 15px;
+    }
+
+    .sticky-social li a {
+        width: 36px;
+        height: 36px;
+        line-height: 36px;
+        font-size: 17px;
+    }
+
+    .go-to-top {
+        width: 36px;
+        height: 36px;
+        line-height: 36px;
+        font-size: 17px;
+        bottom: 15px;
+        right: 15px;
+    }
+
+    section.blockchain .item .title-desc a.title h3 {
+        font-size: 16px;
+    }
+
+    .coins-news-section .right-side .item .details .item-title h3 {
+        font-size: 14px;
+        margin: 0px;
+    }
+
+    .coins-news-section .right-side .item .details p {
+        display: none;
+    }
+
+    .coins-news-section .right-side .item .details .date-admin .date,
+    .coins-news-section .right-side .item .details .date-admin .admin {
+        font-size: 12px;
+    }
+
+    h2.title {
+        font-size: 20px;
+    }
+
+    .coins-news-section .about p {
+        font-size: 14px;
+    }
+
+    .coins-news-section .left-side {
+        margin-top: 30px;
+    }
+
+    .form label {
+        font-size: 14px;
+    }
+
+    .form input {
+        height: 40px !important;
+    }
+
+    .contact-social li:not(:last-child) {
+        margin-left: 5px;
+    }
+
+    .contact-social li a {
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        font-size: 30px;
+    }
+
+    .single-blog .related-posts .item a.img-category img {
+        width: 100%;
+    }
+
+    .single-blog .content {
+        margin-top: 30px;
+    }
+
+    .sellandbuy .sell-buy .content h3 {
+        font-size: 16px;
+    }
+
+    .sellandbuy .sell-buy .content p,
+    .sellandbuy .sell-buy .content ul,
+    .sellandbuy .sell-buy .content ol,
+    .sellandbuy .sell-buy .content strong,
+    .sellandbuy .sell-buy .advice p {
+        font-size: 14px;
+    }
+
+    .sellandbuy .sell-buy .advantages .item {
+        margin-bottom: 20px;
+    }
+
+    .sellandbuy .sell-buy .content iframe {
+        height: 300px;
+    }
+}
+
+@media (max-width: 557px) {
+    .main-news .breaking-main-news .breaking-news-carousel {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+
+    .main-news .breaking-main-news .breaking-news-carousel h5 {
+        width: 100%;
+    }
+
+    .main-news .breaking-main-news .breaking-news-carousel ul li a {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+
+    .main-news .breaking-main-news .breaking-news-carousel ul li a span {
+        display: none;
+    }
+
+    .main-news .breaking-main-news .main-carousel .carousel-caption h2 {
+        font-size: 18px;
+    }
+
+    .main-news .breaking-main-news .main-carousel .carousel-indicators {
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+    }
+
+    .main-news .breaking-main-news .main-carousel .carousel-indicators li {
+        margin-left: 5px;
+    }
+
+    .main-news .popular-recent .tab-pane .item .info h3 {
+        margin-bottom: 10px;
+    }
+
+    h2.title {
+        font-size: 16spx;
+    }
+
+    .coins-news .col-lg-6:first-child a.item-title h3,
+    .coins-news .col-lg-6:nth-child(2) a.item-title h3 {
+        font-size: 16px;
+    }
+
+    .coins-news .col-lg-6 .item {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+
+    .coins-news .col-lg-6 .item a.img-category {
+        width: 100%;
+    }
+
+    .coins-news .col-lg-6 .item .title-date-admin {
+        width: 100%;
+        padding-right: 0px;
+        margin-top: 10px;
+    }
+
+    .coins-news .col-lg-6 .item .date-admin {
+        margin-top: 10px;
+    }
+
+    .coins-news .col-lg-6 .item .date-admin .date,
+    .coins-news .col-lg-6 .item .date-admin .admin {
+        margin-top: 0px;
+    }
+
+    .blockchain-technology .blockchain-carousel .item {
+        border: none;
+    }
+
+    .blockchain-technology .blockchain-carousel .item .item-title {
+        margin: 0px;
+        margin-bottom: 15px;
+        margin-top: 10pxs;
+    }
+
+    .blockchain-carousel img {
+        width: 100%;
+    }
+
+    section.general-news .item .item-title h3,
+    .coins-news .col-md-6 .item a.item-title h3,
+    .blockchain-technology .blockchain-carousel .item .item-title h3 {
+        margin-top: 10px;
+    }
+
+    section.blockchain .item a.img img {
+        width: 100%;
+    }
+
+    .form {
+        padding: 15px;
+    }
+}
+
+/* // Responsive */
